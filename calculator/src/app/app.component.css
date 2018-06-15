@@ -1,0 +1,98 @@
+.calculator-wrapper{
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    display: inline-block;
+    width: 512px;
+    margin-left: 30%;
+    border: 10px solid #d2c9bb;
+    margin-top: 2%;
+}
+
+.footer{
+    font-family: 'Roboto Mono', monospace;
+    color: #9e8a6a;
+    text-align: center;
+    font-size: 11px;
+    margin-top: 2%;
+}
+
+.operation-wrapper input, .operation-wrapper p {
+    display: inline-block;
+}
+
+.operation-wrapper p {
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 22px;
+    color: #333;
+}
+
+.operation-wrapper input {
+    width: 42px;
+    height: 39px;
+    font-size: 17px;
+    border: none;
+    background-color: #f3eee2;
+    text-align: center;
+    color: #796f6f;
+}
+
+.operation-wrapper input:focus{
+    outline-color: #fd846a;
+}
+
+.calculator-wrapper {
+    text-align: center;
+}
+
+.operation-wrapper button {
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: #f3eee2;
+    padding: 13px 18px;
+    cursor: pointer;
+    color: #fd846a;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    transition: .2s background-color;
+}
+
+.operation-wrapper button:hover{
+    background-color: #e8e2d2;
+}
+
+.operation-wrapper p {
+    padding: 8px 18px;
+    vertical-align: middle;
+    color: #fd846a;
+    font-weight: bold;
+}
+
+.operation-wrapper .result{
+    min-width: 100px;
+    background-color: #e0f9cd;
+    height: 42px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    color: #796f6f;
+}
+
+.calculator-wrapper h4 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #845e34;
+}
+
+@media only screen and (max-width: 890px) {
+    .calculator-wrapper{
+        margin-left: 15%;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .calculator-wrapper{
+        margin-left: 5%;
+    }
+}
