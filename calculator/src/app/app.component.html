@@ -4,38 +4,38 @@
 
     <!-- SUM -->
     <div class="operation-wrapper">
-        <input type="text"/> 
+        <input type="text" [(ngModel)] = "sumValue1"/> 
         <p>+</p>
-        <input type="text"/>
-        <button type="button">=</button>
-        <div class="result"></div>
+        <input type="text" [(ngModel)] = "sumValue2"/>
+        <button type="button" (click)="sum(sumValue1, sumValue2)">=</button>
+        <div class="result">{{sumResult}}</div>
     </div>
 
     <!-- Difference -->
     <div class="operation-wrapper">
-      <input type="text"/> 
+      <input type="text" [(ngModel)] = "diffValue1"/> 
       <p>-</p>
-      <input type="text"/>
-      <button type="button">=</button>
-      <div class="result"></div>
+      <input type="text" [(ngModel)] = "diffValue2"/>
+      <button type="button" (click)="diff(diffValue1, diffValue2)">=</button>
+      <div class="result">{{diffResult}}</div>
     </div>
 
     <!-- Product -->
     <div class="operation-wrapper">
-      <input type="text"/> 
+      <input type="text" [(ngModel)] = "prodValue1"/> 
       <p>*</p>
-      <input type="text"/>
-      <button type="button">=</button>
-      <div class="result"></div>
+      <input type="text" [(ngModel)] = "prodValue2"/>
+      <button type="button" (click)="prod(prodValue1, prodValue2)">=</button>
+      <div class="result">{{prodResult}}</div>
     </div>
 
     <!-- Quotient -->
     <div class="operation-wrapper">
-      <input type="text"/> 
+      <input type="text" [(ngModel)] = "quoValue1"/> 
       <p>\</p>
-      <input type="text"/>
-      <button type="button">=</button>
-      <div class="result"></div>
+      <input type="text" [(ngModel)] = "quoValue2"/>
+      <button type="button" (click)="quo(quoValue1, quoValue2)">=</button>
+      <div class="result">{{quoResult}}</div>
     </div>
   </div>
   <p class="footer">Coded by Kate Lee</p>

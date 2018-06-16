@@ -70,13 +70,14 @@
 }
 
 .operation-wrapper .result{
-    min-width: 100px;
+    min-width: 85px;
+    min-height: 20px;
     background-color: #e0f9cd;
-    height: 42px;
-    display: inline-block;
-    vertical-align: middle;
+    padding: 10px 0px;
     text-align: center;
     color: #796f6f;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .calculator-wrapper h4 {
@@ -95,4 +96,13 @@
     .calculator-wrapper{
         margin-left: 5%;
     }
+}
+
+.operation-wrapper p.error-msg{
+    color: #f78168;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-weight: lighter;
 }
