@@ -1,45 +1,44 @@
 <div>
   <div class="calculator-wrapper">
     <h4>Calculator</h4>
-
     <!-- SUM -->
     <div class="operation-wrapper">
-        <input type="text" [(ngModel)] = "sumValue1" pattern="[0-9 .]*" #sv1 = "ngModel"/> 
+        <input type="text" [(ngModel)] = "sumValue1" pattern="[0-9 .]*" #sv1 = "ngModel" required/> 
         <p>+</p>
-        <input type="text" [(ngModel)] = "sumValue2" pattern="[0-9 .]*" #sv2 = "ngModel"/>
-        <button type="button" (click)="sum(sumValue1, sumValue2)">=</button>
+        <input type="text" [(ngModel)] = "sumValue2" pattern="[0-9 .]*" #sv2 = "ngModel" required/>
+        <button type="button" (click)="sum(sumValue1, sumValue2)" [disabled] = "!(sumValue1 && sumValue2) || (sv1?.errors?.required) || (sv2?.errors?.required) || (sv1?.errors?.pattern) || (sv2?.errors?.pattern)">=</button>
         <div class="result">{{sumResult}}</div>
         <p class="error-msg" *ngIf="(sv1?.errors?.pattern) || (sv2?.errors?.pattern)">Hey! Only numbers are allowed.</p>
     </div>
 
     <!-- Difference -->
     <div class="operation-wrapper">
-      <input type="text" [(ngModel)] = "diffValue1" pattern="[0-9 .]*" #dv1 = "ngModel"/> 
+      <input type="text" [(ngModel)] = "diffValue1" pattern="[0-9 .]*" #dv1 = "ngModel" required/> 
       <p>-</p>
-      <input type="text" [(ngModel)] = "diffValue2" pattern="[0-9 .]*" #dv2 = "ngModel"/>
-      <button type="button" (click)="diff(diffValue1, diffValue2)">=</button>
+      <input type="text" [(ngModel)] = "diffValue2" pattern="[0-9 .]*" #dv2 = "ngModel" required/>
+      <button type="button" (click)="diff(diffValue1, diffValue2)" [disabled] = "!(diffValue1 && diffValue2) || (dv1?.errors?.required) || (dv2?.errors?.required) || (dv1?.errors?.pattern) || (dv2?.errors?.pattern)">=</button>
       <div class="result">{{diffResult}}</div>
       <p class="error-msg" *ngIf="(dv1?.errors?.pattern) || (dv2?.errors?.pattern)">Hey! Only numbers are allowed.</p>
     </div>
 
     <!-- Product -->
     <div class="operation-wrapper">
-      <input type="text" [(ngModel)] = "prodValue1" pattern="[0-9 .]*" #pv1 = "ngModel"/> 
+      <input type="text" [(ngModel)] = "prodValue1" pattern="[0-9 .]*" #pv1 = "ngModel" required/> 
       <p>*</p>
-      <input type="text" [(ngModel)] = "prodValue2" pattern="[0-9 .]*" #pv2 = "ngModel"/>
-      <button type="button" (click)="prod(prodValue1, prodValue2)">=</button>
+      <input type="text" [(ngModel)] = "prodValue2" pattern="[0-9 .]*" #pv2 = "ngModel" required/>
+      <button type="button" (click)="prod(prodValue1, prodValue2)" [disabled] = "!(prodValue1 && prodValue2) || (pv1?.errors?.required) || (pv2?.errors?.required) || (pv1?.errors?.pattern) || (pv2?.errors?.pattern)">=</button>
       <div class="result">{{prodResult}}</div>
       <p class="error-msg" *ngIf="(pv1?.errors?.pattern) || (pv2?.errors?.pattern)">Hey! Only numbers are allowed.</p>
     </div>
 
     <!-- Quotient -->
     <div class="operation-wrapper">
-      <input type="text" [(ngModel)] = "quoValue1" pattern="[0-9 .]*" #ov1 = "ngModel"/> 
+      <input type="text" [(ngModel)] = "quoValue1" pattern="[0-9 .]*" #qv1 = "ngModel" required/> 
       <p>\</p>
-      <input type="text" [(ngModel)] = "quoValue2" pattern="[0-9 .]*" #ov2 = "ngModel"/>
-      <button type="button" (click)="quo(quoValue1, quoValue2)">=</button>
+      <input type="text" [(ngModel)] = "quoValue2" pattern="[0-9 .]*" #qv2 = "ngModel" required/>
+      <button type="button" (click)="quo(quoValue1, quoValue2)" [disabled] = "!(quoValue1 && quoValue2) || (qv1?.errors?.required) || (qv2?.errors?.required) || (qv1?.errors?.pattern) || (qv2?.errors?.pattern)">=</button>
       <div class="result">{{quoResult}}</div>
-      <p class="error-msg" *ngIf="(ov1?.errors?.pattern) || (ov2?.errors?.pattern)">Hey! Only numbers are allowed.</p>
+      <p class="error-msg" *ngIf="(qv1?.errors?.pattern) || (qv2?.errors?.pattern)">Hey! Only numbers are allowed.</p>
     </div>
   </div>
   <p class="footer">Coded by Kate Lee</p>

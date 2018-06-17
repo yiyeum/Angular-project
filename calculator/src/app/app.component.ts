@@ -26,7 +26,7 @@ export class AppComponent {
 
   // function - sum
   sum(value1: string, value2: string){
-    this.sumResult = parseFloat(value1) + parseFloat(value2);
+      this.sumResult = parseFloat(value1) + parseFloat(value2);
       this.diffValue1 = null;
       this.diffValue2 = null;
       this.prodValue1 = null;
@@ -36,6 +36,7 @@ export class AppComponent {
       this.diffResult = null;
       this.prodResult = null;
       this.quoResult = null;
+    
   }
 
   // function - difference

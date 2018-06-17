@@ -63,6 +63,10 @@
     background-color: #e8e2d2;
 }
 
+.operation-wrapper button:focus{
+    outline-color: #fd846a;
+}
+
 .operation-wrapper p {
     padding: 8px 18px;
     vertical-align: middle;
@@ -106,4 +110,21 @@
     padding: 0;
     letter-spacing: 1px;
     font-weight: lighter;
+}
+
+button[type="button"]:disabled {
+    background-color: #b5b5b5;
+    color: #000;
+    opacity: 0.2;
+}
+
+button[type="button"]:disabled:hover {
+    background-color: #b5b5b5;
+    color: #000;
+    opacity: 0.2;
+}
+
+.label-group label {
+    font-size: 11px;
+    color: #845e34;
 }
