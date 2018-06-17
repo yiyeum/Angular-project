@@ -19,14 +19,14 @@ export class AppComponent {
   public quoValue2 : string;
 
   // Result vars
-  public sumResult : number;
-  public diffResult : number;
-  public prodResult : number;
+  public sumResult : any;
+  public diffResult : any;
+  public prodResult : any;
   public quoResult : any;
 
   // function - sum
   sum(value1: string, value2: string){
-      this.sumResult = parseFloat(value1) + parseFloat(value2);
+      this.sumResult = (parseFloat(value1) + parseFloat(value2)).toFixed(2);
       this.diffValue1 = null;
       this.diffValue2 = null;
       this.prodValue1 = null;
@@ -41,7 +41,7 @@ export class AppComponent {
 
   // function - difference
   diff(value1: string, value2: string){
-    this.diffResult = parseFloat(value1) - parseFloat(value2);
+    this.diffResult = (parseFloat(value1) - parseFloat(value2)).toFixed(2);
     this.sumValue1 = null;
     this.sumValue2 = null;
     this.prodValue1 = null;
@@ -55,7 +55,7 @@ export class AppComponent {
 
   // function - product
   prod(value1: string, value2: string){
-    this.prodResult = parseFloat(value1) * parseFloat(value2);
+    this.prodResult = (parseFloat(value1) * parseFloat(value2)).toFixed(2);
     this.sumValue1 = null;
     this.sumValue2 = null;
     this.diffValue1 = null;
