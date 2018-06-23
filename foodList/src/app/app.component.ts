@@ -9,13 +9,13 @@ import { FoodItem } from './foodItem/foodItem';
 export class AppComponent {
   title = 'app';
   foodItems: FoodItem[];
+  dateOfToday:string;
 
   constructor(){
     //check if exists on sessionStorage
     let foodInSessionStorage = JSON.parse(sessionStorage.getItem('foodArray'));
 
     if(foodInSessionStorage){ // if exists, save in foodItems
-      console.log('im in the storage!');
       this.foodItems = foodInSessionStorage;
     }
 
@@ -30,8 +30,18 @@ export class AppComponent {
       this.foodItems = FOODITEMS;
       // save in the session storage
       sessionStorage.setItem('foodArray',JSON.stringify(this.foodItems));
-      console.log('im not in the storage yo!');
     }
 
+    // Get the date to display on footer
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"
+                        ];
+
+    let today = new Date();
+    let year = today.getUTCFullYear();
+    let month = monthNames[today.getMonth()];
+    let day = today.getUTCDate();
+
+    this.dateOfToday = month + ' ' + day + ', ' + year;
   }
 }
