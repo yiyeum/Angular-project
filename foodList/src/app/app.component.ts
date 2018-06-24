@@ -9,7 +9,7 @@ import { FoodItem } from './foodItem/foodItem';
 export class AppComponent {
   title = 'app';
   foodItems: FoodItem[];
-  dateOfToday:string;
+  dateOfToday: string;
 
   constructor(){
     //check if exists on sessionStorage
