@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
 })
 
 export class Home{
+    foodItems: any;
+    
+    constructor(){
+        // make the foodArray as an object and return using get function
+        this.foodItems = JSON.parse(sessionStorage.getItem('foodArray'));
+    }
 }

@@ -1,1 +1,1 @@
-<li *ngFor="let food of foodItems">{{food.name}}</li>
+<li *ngFor="let food of foodItems"><a routerLink="/details/{{food.id}}">{{food.id}}</a> {{food.name}}</li>
