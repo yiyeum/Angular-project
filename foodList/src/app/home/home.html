@@ -1,1 +1,8 @@
-<li *ngFor="let food of foodItems"><a routerLink="/details/{{food.id}}">{{food.id}}</a> {{food.name}}</li>
+<ul class="home-food-list">
+    <li *ngFor="let food of foodItems">
+        <a routerLink="/details/{{food.id}}">
+            {{food.id}}
+            {{food.name}}
+        </a> 
+    </li>
+</ul>
